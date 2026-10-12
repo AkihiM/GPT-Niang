@@ -1,6 +1,7 @@
 GPT娘内置语录来源与许可
 
 内置33句由原创台词、用户提供台词和以下7句上游文本组成。
+本 Fork 另保留用户指定的“好女孩……”一条，内置语录共34句。
 上游来源：https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget/blob/770d3f55ff40284eb244fff33fc9ed4654be8a45/assets/whale-widget.js
 
 真当我是便宜货啊...

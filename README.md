@@ -1,12 +1,18 @@
 # GPT-Niang（GPT 娘）
 
+这是基于 [T7moris/GPT-Niang](https://github.com/T7moris/GPT-Niang) 的个人 Fork。当前功能分支在上游 1.3.4 源码上整理了 Windows 角色图库、图片导入与管理、缩放抗锯齿和额度气泡布局，并修复小数音量恢复；感谢原作者和上游贡献者。
+
+公开版本仅附带原项目许可范围内的「龙娘1」，可通过图库末尾的「＋ 添加形象」卡片导入自己的图片。第三方龙娘2素材、个人导入图、额度数据、日志与本机配置均不随仓库发布。改动与使用说明见 [Windows 定制说明](docs/WINDOWS-CUSTOMIZATION.md)。这是 Fork 的功能分支，尚未向上游提交 PR，也没有单独发布改版安装包。
+
+**下面保留上游项目介绍；所有 T7moris/GPT-Niang Release 下载链接均指向上游正式版，不包含本分支的定制功能。**
+
 让一只白发紫瞳的小龙娘，陪你看 Codex 的剩余额度。
 
-**Windows / macOS 桌面挂件 · 自动识别套餐与额度窗口 · 中文语录 · 当前正式版 1.3.4**
+**Windows / macOS 桌面挂件 · 自动识别套餐与额度窗口 · 中文语录 · 上游正式版 1.3.4**
 
 1.3.4 按 PR #20 的只移动窗口方案整合 Windows DPI 修复，并补齐 Business 个人额度的双平台兼容。交互以 Windows 为基准：Mac 连续点击不再打开设置，支持相同的大小范围、桌面置顶开关和独立位置保存；保留 SwiftUI／AppKit 原生实现及双平台自动更新、回滚与历史版本清理。
 
-[**下载最新版**](https://github.com/T7moris/GPT-Niang/releases/latest) · [Windows 安装](#windows-安装) · [macOS 安装](#macos-安装) · [更新记录](更新记录.md) · [反馈问题](https://github.com/T7moris/GPT-Niang/issues/new)
+[**下载上游最新版**](https://github.com/T7moris/GPT-Niang/releases/latest) · [Windows 安装](#windows-安装) · [macOS 安装](#macos-安装) · [上游更新记录](更新记录.md) · [反馈上游问题](https://github.com/T7moris/GPT-Niang/issues/new)
 
 <img src="gpt-niang-usage/assets/gpt-dragon-niang-bust.png" alt="无嘴巴的白发龙娘半身形象" width="240">
 
@@ -61,7 +67,7 @@ node /Applications/GPTNiangMac.app/Contents/Resources/Backend/runtime/detect-pla
 
 两边都需要 **Node.js 20 或更新版本**，以及已安装并用 ChatGPT 账号登录的 **Codex 桌面端**。下载包不附带 Node.js；缺少时请先从 [Node.js 官方网站](https://nodejs.org/) 安装。
 
-在 [Release 下载页](https://github.com/T7moris/GPT-Niang/releases/latest) 的 **Assets** 中选择自己的系统：
+下面是上游正式版的安装说明。在 [上游 Release 下载页](https://github.com/T7moris/GPT-Niang/releases/latest) 的 **Assets** 中选择自己的系统；本 Fork 的定制功能目前只在源码分支提供：
 
 | 系统 | v1.3.4 安装包 | 安装入口 |
 | --- | --- | --- |
@@ -138,7 +144,7 @@ Windows / macOS 1.3.4：右键角色，从原生菜单／设置进入「显示�
 
 Windows 启动时先检查 Codex 的输入或导航控件是否可用，连续两次确认主界面就绪后才显示挂件；加载画面中的原生窗口本身不会触发显示。已启动的桌面模式继续独立显示。
 
-内置语录为作者确认的 **33 句**，包括「高性能↓」「我不是吃白饭的大肥鱼」「我是啥龙？」和三句 token／储存台词。1.3.4 保留此前确认的语录池；下载时请核对对应版本的 `SHA256SUMS.txt`。
+上游 1.3.4 内置语录为作者确认的 **33 句**，包括「高性能↓」「我不是吃白饭的大肥鱼」「我是啥龙？」和三句 token／储存台词。本 Fork 额外保留用户提供的「好女孩……」，共 **34 句**；不会把其他本机语录文件随仓库发布。下载上游安装包时请核对对应版本的 `SHA256SUMS.txt`。
 
 升级会保留各台电脑的自定义语录。若要使用这份内置台词池，在语录设置里选择「恢复内置语录」（Mac 为「恢复默认」）；恢复前请备份自行添加的句子，Windows会自动保留旧列表备份。自定义文件只保存在本机，不会随账户同步到另一台电脑。
 
